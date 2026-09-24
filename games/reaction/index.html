@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Reaction Time — Funhouse</title>
+<link rel='stylesheet' href='../../style.css'>
+</head>
+<body class='game'>
+<div class='wrap'>
+  <a class='back' href='../../'>&larr; Funhouse</a>
+  <h1>Reaction Time</h1>
+  <p class='sub'>Click the moment the screen turns green.</p>
+
+  <div id='box' style='height:280px;border-radius:16px;background:#111318;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:clamp(17px,4.4vw,26px);font-weight:700;cursor:pointer;user-select:none;touch-action:manipulation'>
+    <span id='msg'>Click to start</span>
+  </div>
+
+  <p class='stat'>Best: <b id='best'>&mdash;</b> &middot; Last: <b id='last'>&mdash;</b></p>
+  <p class='stat'>Space bar works too. Under ~250 ms is quick; under ~200 ms is very quick.</p>
+</div>
+<script src='game.js'></script>
+</body>
+</html>
