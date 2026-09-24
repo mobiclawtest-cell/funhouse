@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Aim Trainer — Funhouse</title>
+<link rel='stylesheet' href='../../style.css'>
+<style>
+  #field{position:relative;height:min(62vh,460px);background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;touch-action:manipulation}
+  .target{position:absolute;width:56px;height:56px;border-radius:50%;background:#ff6b8a;box-shadow:0 0 0 4px rgba(255,107,138,.22);cursor:pointer}
+</style>
+</head>
+<body class='game'>
+<div class='wrap'>
+  <a class='back' href='../../'>&larr; Funhouse</a>
+  <h1>Aim Trainer</h1>
+  <p class='sub'>Hit the circles before they fade. 30 seconds.</p>
+
+  <div id='field'></div>
+
+  <p class='stat'>Hits: <b id='hits'>0</b> &middot; Missed: <b id='miss'>0</b> &middot; Accuracy: <b id='acc'>&mdash;</b> &middot; Time: <b id='time'>30.0</b>s &middot; Best: <b id='best'>&mdash;</b></p>
+  <p class='stat' id='msg'>Tap inside the box to start.</p>
+</div>
+<script src='game.js'></script>
+</body>
+</html>

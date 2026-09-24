@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Typing Race — Funhouse</title>
+<link rel='stylesheet' href='../../style.css'>
+<style>
+  #text{font-size:clamp(17px,3.4vw,21px);line-height:1.85;letter-spacing:.01em;margin-bottom:16px;word-break:break-word}
+  #text .ok{color:#16a34a}
+  #text .bad{color:#dc2626;text-decoration:underline}
+  #input{
+    width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;
+    border:1px solid var(--line);background:var(--bg);color:var(--ink);
+  }
+</style>
+</head>
+<body class='game'>
+<div class='wrap'>
+  <a class='back' href='../../'>&larr; Funhouse</a>
+  <h1>Typing Race</h1>
+  <p class='sub'>Type the sentence exactly. Speed and accuracy are measured live.</p>
+
+  <div class='panel'>
+    <div id='text'></div>
+    <input id='input' type='text' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false' placeholder='Type here...'>
+  </div>
+
+  <p class='stat'>Speed: <b id='wpm'>0</b> wpm &middot; Accuracy: <b id='acc'>&mdash;</b> &middot; Time: <b id='time'>0.0s</b> &middot; Best: <b id='best'>&mdash;</b></p>
+  <p class='stat'><button id='again' type='button'>New sentence</button></p>
+</div>
+<script src='game.js'></script>
+</body>
+</html>

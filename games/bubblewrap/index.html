@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Bubble Wrap — Funhouse</title>
+<link rel='stylesheet' href='../../style.css'>
+<style>
+  #sheet{
+    display:grid;grid-template-columns:repeat(10,1fr);gap:6px;max-width:520px;margin:0 auto;
+    padding:14px;border-radius:16px;background:var(--card);border:1px solid var(--line);
+  }
+  .bubble{
+    aspect-ratio:1;border-radius:50%;cursor:pointer;touch-action:manipulation;
+    background:radial-gradient(circle at 34% 30%, #ffffff, #cfe0ff 42%, #9dbbf5);
+    box-shadow:0 1px 2px rgba(0,0,0,.18), inset 0 -2px 4px rgba(0,0,0,.08);
+    transition:transform .07s ease, background .12s ease, box-shadow .12s ease;
+  }
+  .bubble:active{transform:scale(.9)}
+  .bubble.popped{
+    background:radial-gradient(circle at 50% 50%, rgba(0,0,0,.05), rgba(0,0,0,.02));
+    box-shadow:inset 0 0 0 1px var(--line);
+    transform:scale(.86);
+    cursor:default;
+  }
+</style>
+</head>
+<body class='game'>
+<div class='wrap'>
+  <a class='back' href='../../'>&larr; Funhouse</a>
+  <h1>Bubble Wrap</h1>
+  <p class='sub'>There is no score, no timer and no fail state. Pop all of them.</p>
+
+  <div id='sheet'></div>
+
+  <p class='stat'>Popped: <b id='count'>0</b> / <b id='total'>0</b></p>
+  <p class='stat' id='msg'></p>
+  <p class='stat'><button id='fresh' type='button'>New sheet</button></p>
+</div>
+<script src='game.js'></script>
+</body>
+</html>
